@@ -27,7 +27,7 @@ import com.adobe.users.kalyanar.csrf.JWTBuilder;
 
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
-@Component(name="Nedbank CSRF Guard JWTBuilder",description = "Nedbank CSRF Guard JWT builder",metatype = false)
+@Component(name="aem CSRF Guard JWTBuilder",description = "aem CSRF Guard JWT builder",metatype = false)
 @Service
 public class JWTBuilderImpl implements JWTBuilder {
 private HmacSHA256Signer signer ;

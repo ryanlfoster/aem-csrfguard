@@ -15,7 +15,7 @@ import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 
 import com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration;
 
-@SlingServlet(paths = { "/bin/nedbank/csrfguard" }, extensions = { "js" }, metatype = false, description = "Servlet that return the CSRF token for a given user.", label = "Nedbank CSRF Token Generation Servlet",generateComponent= true)
+@SlingServlet(paths = { "/bin/aem/csrfguard" }, extensions = { "js" }, metatype = false, description = "Servlet that return the CSRF token for a given user.", label = "aem CSRF Token Generation Servlet",generateComponent= true)
 public class JavascriptServlet extends SlingSafeMethodsServlet {
 	
 	@Reference(policy = ReferencePolicy.DYNAMIC,cardinality=ReferenceCardinality.OPTIONAL_UNARY)

@@ -21,13 +21,13 @@ import org.osgi.service.component.ComponentContext;
 
 import com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration;
 
-@Component(name="Nedbank CSRF Guard Configuration",description = "Nedbank CSRF Guard configuration",metatype = true, policy=ConfigurationPolicy.REQUIRE)
+@Component(name=“AEM CSRF Guard Configuration",description = “AEM CSRF Guard configuration",metatype = true, policy=ConfigurationPolicy.REQUIRE)
 @Service
 public class CSRFGuardConfigurationImpl implements CSRFGuardConfiguration {
 	 
 	 private static final long DEFAULT_TOKEN_EXPIRATION_TIME = 600;
-	 private static final String DEFAULT_TOKEN_NAME = "nedbank_csrf_token";
-	 private static final String DEFAULT_TOKEN_PARAM_NAME = "nedbank_csrf_token";
+	 private static final String DEFAULT_TOKEN_NAME = “aem_csrf_token";
+	 private static final String DEFAULT_TOKEN_PARAM_NAME = "aem_csrf_token";
 	 private static final String DEFAULT_JAVASCRIPT_TEMPLATE_FILE = "csrfguard.js";
 
 	 private static final String DEFAULT_CLAIMSET_KEY = "csrfscopeeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
@@ -59,7 +59,7 @@ public class CSRFGuardConfigurationImpl implements CSRFGuardConfiguration {
 	            unbounded=PropertyUnbounded.ARRAY, value={"POST", "DELETE"})
 	    private static final String PROP_METHODS = "filter.methods";
    	 
-	    @Property(unbounded = PropertyUnbounded.ARRAY , value = {"/bin/nedbank/csrfguard/generatetoken"})
+	    @Property(unbounded = PropertyUnbounded.ARRAY , value = {"/bin/aem/csrfguard/generatetoken"})
 	    private static final String PROP_UNPROTECTED = "unprotected.paths";
 	    
 	    @Property(unbounded = PropertyUnbounded.ARRAY )

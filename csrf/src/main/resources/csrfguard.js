@@ -334,7 +334,7 @@
 		var xhr = window.XMLHttpRequest ? new window.XMLHttpRequest : new window.ActiveXObject("Microsoft.XMLHTTP");
 		var pageTokens = {};
 		
-		xhr.open("GET", "/bin/nedbank/csrfguard/generatetoken.json", false);
+		xhr.open("GET", "/bin/aem/csrfguard/generatetoken.json", false);
 		xhr.send(null);
 		
 		var text = xhr.responseText;
@@ -372,7 +372,7 @@
 			}
 			var xhr = window.XMLHttpRequest ? new window.XMLHttpRequest : new window.ActiveXObject("Microsoft.XMLHTTP");
 		var csrfToken = {};
-		xhr.open("GET", "/bin/nedbank/csrfguard/generatetoken.json", false);
+		xhr.open("GET", "/bin/aem/csrfguard/generatetoken.json", false);
 		xhr.setRequestHeader("FETCH-CSRF-TOKEN", "1");
 		xhr.send(null);
 		var token_pair = xhr.responseText;

@@ -31,7 +31,7 @@ import com.adobe.users.kalyanar.csrf.JWTBuilder;
  * @author kalyanar
  * 
  */
-@Component(metatype = false, description = "Request filter checking the CSRF token of modification requests.", label = "Nedbank  CSRF Token Validation Filter")
+@Component(metatype = false, description = "Request filter checking the CSRF token of modification requests.", label = "aem  CSRF Token Validation Filter")
 @Service
 @Properties({
 		@Property(name = "sling.filter.scope", value = { "request" }, propertyPrivate = true),

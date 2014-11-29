@@ -26,7 +26,7 @@ import com.adobe.users.kalyanar.csrf.JWTBuilder;
  * @author kalyanar
  * 
  */
-@SlingServlet(paths = { "/bin/nedbank/csrfguard/generatetoken" }, extensions = { "json" }, metatype = false, description = "Servlet that return the CSRF token for a given user.", label = "Nedbank CSRF Token Generation Servlet",generateComponent= true)
+@SlingServlet(paths = { "/bin/aem/csrfguard/generatetoken" }, extensions = { "json" }, metatype = false, description = "Servlet that return the CSRF token for a given user.", label = "aem CSRF Token Generation Servlet",generateComponent= true)
 public class TokenGenerationServlet extends SlingSafeMethodsServlet {
 	private final Logger logger = LoggerFactory
 			.getLogger(TokenGenerationServlet.class);
