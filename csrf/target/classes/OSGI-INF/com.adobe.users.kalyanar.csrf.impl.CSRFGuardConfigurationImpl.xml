@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="Nedbank CSRF Guard Configuration" configuration-policy="require" activate="activate" modified="activate">
+        <implementation class="com.adobe.users.kalyanar.csrf.impl.CSRFGuardConfigurationImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration"/>
+        </service>
+        <property name="token.expiration.time" type="Long" value="600"/>
+        <property name="token.name" value="nedbank_csrf_token"/>
+        <property name="token.param.name" value="nedbank_csrf_token"/>
+        <property name="scope" value="csrfscopeeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"/>
+        <property name="csrf.javascript.template.file" value="csrfguard.js"/>
+        <property name="filter.methods">
+            POST
+            DELETE
+        </property>
+        <property name="unprotected.paths">
+            /bin/nedbank/csrfguard/generatetoken
+        </property>
+        <property name="protected.paths"/>
+        <property name="service.pid" value="Nedbank CSRF Guard Configuration"/>
+    </scr:component>
+</components>

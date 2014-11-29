@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component name="Nedbank CSRF Guard JWTBuilder" activate="activate" modified="activate">
+        <implementation class="com.adobe.users.kalyanar.csrf.impl.JWTBuilderImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.users.kalyanar.csrf.JWTBuilder"/>
+        </service>
+        <property name="service.pid" value="Nedbank CSRF Guard JWTBuilder"/>
+        <reference name="csrfConfig" interface="com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration" cardinality="1..1" policy="static" bind="bindCsrfConfig" unbind="unbindCsrfConfig"/>
+    </scr:component>
+</components>

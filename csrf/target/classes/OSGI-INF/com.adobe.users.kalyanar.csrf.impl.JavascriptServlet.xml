@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.adobe.users.kalyanar.csrf.impl.JavascriptServlet">
+        <implementation class="com.adobe.users.kalyanar.csrf.impl.JavascriptServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths">
+            /bin/nedbank/csrfguard
+        </property>
+        <property name="sling.servlet.extensions">
+            js
+        </property>
+        <property name="service.pid" value="com.adobe.users.kalyanar.csrf.impl.JavascriptServlet"/>
+        <reference name="csrfConfig" interface="com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration" cardinality="0..1" policy="dynamic" bind="bindCsrfConfig" unbind="unbindCsrfConfig"/>
+    </scr:component>
+</components>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.adobe.users.kalyanar.csrf.impl.CSRFGuardConfigurationImpl">
+    <OCD id="Nedbank CSRF Guard Configuration" name="%Nedbank CSRF Guard Configuration.name" description="%Nedbank CSRF Guard Configuration.description">
+        <AD id="token.expiration.time" type="Long" default="600" name="%Nedbank CSRF Guard Configuration.token.expiration.time.name" description="%Nedbank CSRF Guard Configuration.token.expiration.time.description"/>
+        <AD id="token.name" type="String" default="nedbank_csrf_token" name="%Nedbank CSRF Guard Configuration.token.name.name" description="%Nedbank CSRF Guard Configuration.token.name.description"/>
+        <AD id="token.param.name" type="String" default="nedbank_csrf_token" name="%Nedbank CSRF Guard Configuration.token.param.name.name" description="%Nedbank CSRF Guard Configuration.token.param.name.description"/>
+        <AD id="scope" type="String" default="csrfscopeeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" name="%Nedbank CSRF Guard Configuration.scope.name" description="%Nedbank CSRF Guard Configuration.scope.description"/>
+        <AD id="filter.methods" type="String" default="POST,DELETE" name="%Nedbank CSRF Guard Configuration.filter.methods.name" description="%Nedbank CSRF Guard Configuration.filter.methods.description" cardinality="2147483647"/>
+        <AD id="unprotected.paths" type="String" default="/bin/nedbank/csrfguard/generatetoken" name="%Nedbank CSRF Guard Configuration.unprotected.paths.name" description="%Nedbank CSRF Guard Configuration.unprotected.paths.description" cardinality="2147483647"/>
+        <AD id="protected.paths" type="String" name="%Nedbank CSRF Guard Configuration.protected.paths.name" description="%Nedbank CSRF Guard Configuration.protected.paths.description" cardinality="2147483647"/>
+    </OCD>
+    <Designate pid="Nedbank CSRF Guard Configuration">
+        <Object ocdref="Nedbank CSRF Guard Configuration"/>
+    </Designate>
+</metatype:MetaData>
