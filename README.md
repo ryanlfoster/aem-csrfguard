@@ -6,7 +6,7 @@ This approach used jwt(https://tools.ietf.org/html/draft-ietf-oauth-json-web-tok
 
 USAGE:
 mvn clean install
-In your page component jsp or sightly file, add &gt;script src="/bin/aem/csrfguard.js" /&lt;
+In your page component jsp or sightly file, add &lt;script src="/bin/aem/csrfguard.js" /&gt;
 
 And add a osgiconfig for com.adobe.users.kalyanar.csrf.CSRFGuardConfiguration
 If this config is not available, then the guard will be disabled.
